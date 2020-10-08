@@ -32,7 +32,7 @@ router.post('/exec.do', async (req, res) => {
     }
   })
 
-  res.json({
+  res.status(201).json({
     createResult: clients
   })
 })
