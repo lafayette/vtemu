@@ -57,4 +57,11 @@ router.post('/campaigns/:campaign/exec.do', async (req, res) => {
   }
 
   res.status(200).send()
+
+  // res.status(200).json({
+  //   errors: [{
+  //     clientIdentifiers: { string1: req.body.clients[0].clientIdentifiers.guid },
+  //     errorMessage: 'Client has no phones'
+  //   }]
+  // })
 })
