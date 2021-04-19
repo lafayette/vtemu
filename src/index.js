@@ -17,9 +17,10 @@ app.get('/', (req, res) => {
   res.send('VoipTime emulator')
 })
 
+app.use('/api/v1/priorities', require('./controllers/api/priorities'))
 app.use('/api/v1/clients', require('./controllers/api/clients'))
 app.use('/api/v1/tacs', require('./controllers/api/tacs'))
-// app.use('/api/v1/telemarketing', require('./controllers/api/telemarketing'))
+app.use('/api/v1/telemarketing', require('./controllers/api/telemarketing'))
 app.use('/api/v1', require('./controllers/api/base'))
 
 app.use((req, res) => {
